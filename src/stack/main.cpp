@@ -1,5 +1,5 @@
 #include <iostream>
-#include "stack.h"
+#include "../../inc/stack/stack.h"
 
 int main(void)
 {

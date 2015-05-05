@@ -1,5 +1,5 @@
 #include <iostream>
-#include "simplelinkedlist.h"
+#include "../../inc/simpleLinkedList/simpleLinkedList.h"
 
 int main(void)
 {

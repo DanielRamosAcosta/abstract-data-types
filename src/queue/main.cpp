@@ -1,5 +1,5 @@
 #include <iostream>
-#include "queue.h"
+#include "../../inc/queue/queue.h"
 
 int main(void)
 {

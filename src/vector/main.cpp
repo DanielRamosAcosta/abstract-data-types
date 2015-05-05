@@ -1,5 +1,5 @@
 #include <iostream>
-#include "vector.h"
+#include "../../inc/vector/vector.h"
 
 int main(void)
 {
