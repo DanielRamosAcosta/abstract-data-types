@@ -36,6 +36,9 @@ binaryTree: $(SOURCES)/binaryTree.cpp $(INCLUDES)/binaryTree.hpp
 binarySearchTree: $(SOURCES)/binarySearchTree.cpp $(INCLUDES)/binarySearchTree.hpp
 	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
+AVLTree: $(SOURCES)/AVLTree.cpp $(INCLUDES)/AVLTree.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
+
 #----Nodes----------------------------------------------------------------->
 
 node: $(SOURCES)/node.cpp $(INCLUDES)/node.hpp
@@ -44,7 +47,7 @@ node: $(SOURCES)/node.cpp $(INCLUDES)/node.hpp
 simpleLinkedNode: $(SOURCES)/simpleLinkedNode.cpp $(INCLUDES)/simpleLinkedNode.hpp
 	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-doubleLinkedNode: $(SOURCES)/doubleLinkedNode.cpp $(INCLUDES)/doubleLinkedNode.hpp
+doubleLinkedNode: $(SOURCES)/doubleLinkedNode.cpp $(INCLUDES)/doubleLinkedNode.hpp	
 	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
 binaryNode: $(SOURCES)/binaryNode.cpp $(INCLUDES)/binaryNode.hpp
