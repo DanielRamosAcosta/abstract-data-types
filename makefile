@@ -4,61 +4,62 @@ CXX = g++
 
 CXXFLAGS = -std=c++11 -Wall -o $(BINARIES)/$@
 
-INCLUDES = inc
+INCLUDES = include
 SOURCES = src
 DOCUMENTATION = docs
 BINARIES = bin
 
-FILES = main.cpp
+FILES = $@.cpp
 
 RM = rm -f
 
 #----Data-types------------------------------------------------------------>
 
-vector: $(SOURCES)/vector/$(FILES) $(INCLUDES)/vector/vector.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+vector: $(SOURCES)/vector.cpp $(INCLUDES)/vector.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-queue: $(SOURCES)/queue/$(FILES) $(INCLUDES)/queue/queue.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+queue: $(SOURCES)/queue.cpp $(INCLUDES)/queue.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-stack: $(SOURCES)/stack/$(FILES) $(INCLUDES)/stack/stack.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+stack: $(SOURCES)/stack.cpp $(INCLUDES)/stack.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-simpleLinkedList: $(SOURCES)/simpleLinkedList/$(FILES) $(INCLUDES)/simpleLinkedList/simpleLinkedList.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+simpleLinkedList: $(SOURCES)/simpleLinkedList.cpp $(INCLUDES)/simpleLinkedList.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-doubleLinkedList: $(SOURCES)/doubleLinkedList/$(FILES) $(INCLUDES)/doubleLinkedList/doubleLinkedList.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+doubleLinkedList: $(SOURCES)/doubleLinkedList.cpp $(INCLUDES)/doubleLinkedList.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-binaryTree: $(SOURCES)/binaryTree/$(FILES) $(INCLUDES)/binaryTree/binaryTree.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+binaryTree: $(SOURCES)/binaryTree.cpp $(INCLUDES)/binaryTree.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-binarySearchTree: $(SOURCES)/binarySearchTree/$(FILES) $(INCLUDES)/binarySearchTree/binarySearchTree.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+binarySearchTree: $(SOURCES)/binarySearchTree.cpp $(INCLUDES)/binarySearchTree.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
 #----Nodes----------------------------------------------------------------->
 
-node: $(SOURCES)/node/$(FILES) $(INCLUDES)/node/node.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+node: $(SOURCES)/node.cpp $(INCLUDES)/node.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-simpleLinkedNode: $(SOURCES)/simpleLinkedNode/$(FILES) $(INCLUDES)/simpleLinkedNode/simpleLinkedNode.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+simpleLinkedNode: $(SOURCES)/simpleLinkedNode.cpp $(INCLUDES)/simpleLinkedNode.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-doubleLinkedNode: $(SOURCES)/doubleLinkedNode/$(FILES) $(INCLUDES)/doubleLinkedNode/doubleLinkedNode.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+doubleLinkedNode: $(SOURCES)/doubleLinkedNode.cpp $(INCLUDES)/doubleLinkedNode.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-binaryNode: $(SOURCES)/binaryNode/$(FILES) $(INCLUDES)/binaryNode/binaryNode.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+binaryNode: $(SOURCES)/binaryNode.cpp $(INCLUDES)/binaryNode.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
 #----Utlities-------------------------------------------------------------->
 
-random: $(SOURCES)/random/$(FILES) $(INCLUDES)/random/random.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+random: $(SOURCES)/random.cpp $(INCLUDES)/random.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
-exceptions: $(SOURCES)/exceptions/$(FILES) $(INCLUDES)/exceptions/exceptions.h
-	$(CXX) $(CXXFLAGS) $(SOURCES)/$@/$(FILES)
+exceptions: $(SOURCES)/exceptions.cpp $(INCLUDES)/exceptions.hpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
 #----Tools----------------------------------------------------------------->
 
 clean:
 	$(RM) bin/*
+
