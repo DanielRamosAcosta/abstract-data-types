@@ -19,7 +19,9 @@ RM = rm -f
 
 #----Nodes----------------------------------------------------------------->
 
-#WIP
+node: $(INCLUDES)/nodes/node.hpp $(SOURCES)/node.cpp
+	$(CXX) $(CXXFLAGS) $(SOURCES)/$@.cpp
+	
 
 #----Utlities-------------------------------------------------------------->
 
