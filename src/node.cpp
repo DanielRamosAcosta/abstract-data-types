@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/nodes/node.hpp"
+#include "nodes/node.hpp"
 
 int main(void)
 {
