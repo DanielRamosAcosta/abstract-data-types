@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../include/simpleLinkedNode.hpp"
+#include "nodes/singlyLinkedNode.hpp"
 
 int main(void)
 {

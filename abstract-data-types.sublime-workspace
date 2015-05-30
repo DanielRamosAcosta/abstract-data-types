@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"CXX",
+				"CXXFLAGS"
+			],
+			[
 				"m",
 				"m_lft"
 			],
@@ -196,10 +200,26 @@
 	"buffers":
 	[
 		{
-			"file": "LICENSE.md",
+			"file": "include/nodes/simpleLinkedNode.hpp",
 			"settings":
 			{
-				"buffer_size": 465,
+				"buffer_size": 2112,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/simpleLinkedNode.cpp",
+			"settings":
+			{
+				"buffer_size": 120,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "makefile",
+			"settings":
+			{
+				"buffer_size": 1247,
 				"line_ending": "Unix"
 			}
 		}
@@ -280,10 +300,14 @@
 	},
 	"expanded_folders":
 	[
-		"/home/daniel/Documentos/GitHub/abstract-data-types"
+		"/home/daniel/Documentos/GitHub/abstract-data-types",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src"
 	],
 	"file_history":
 	[
+		"/home/daniel/Documentos/GitHub/abstract-data-types/LICENSE.md",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/src/binaryNode.cpp",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/binaryNode.hpp",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/Doxyfile",
@@ -365,35 +389,92 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "LICENSE.md",
+					"file": "include/nodes/simpleLinkedNode.hpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 465,
+						"buffer_size": 2112,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2081,
+								2081
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/simpleLinkedNode.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								35,
+								35
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1247,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -484,7 +565,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 197.0,
+	"side_bar_width": 229.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

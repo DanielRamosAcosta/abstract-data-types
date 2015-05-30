@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------>
 
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall -o $(BIN) -I $(INCLUDES)
+CXXFLAGS = -std=c++11 -Wall -I $(INCLUDES) -o $(BIN)
 
 INCLUDES = include
 SOURCES = src
@@ -20,9 +20,12 @@ NODE_FILES = $(SOURCES)/$(FILES)
 BINARYNODE = $(INCLUDES)/nodes/binaryNode.hpp $(SOURCES)/binaryNode.cpp
 BINARYNODE_FILES = $(SOURCES)/$(FILES)
 
+SINGLYLINKEDNODE = $(INCLUDES)/nodes/singlyLinkedNode.hpp $(SOURCES)/singlyLinkedNode.cpp
+SINGLYLINKEDNODE_FILES = $(SOURCES)/$(FILES)
+
 #----Data-types------------------------------------------------------------>
 
-all: node binaryNode
+all: node binaryNode singlyLinkedNode
 
 #----Nodes----------------------------------------------------------------->
 
@@ -31,6 +34,9 @@ node: $(NODE)
 
 binaryNode: node $(BINARYNODE)
 	$(CXX) $(CXXFLAGS) $(BINARYNODE_FILES)
+
+singlyLinkedNode: node $(SINGLYLINKEDNODE)
+	$(CXX) $(CXXFLAGS) $(SINGLYLINKEDNODE_FILES)
 	
 
 #----Utlities-------------------------------------------------------------->
