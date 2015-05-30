@@ -23,9 +23,12 @@ BINARYNODE_FILES = $(SOURCES)/$(FILES)
 SINGLYLINKEDNODE = $(INCLUDES)/nodes/singlyLinkedNode.hpp $(SOURCES)/singlyLinkedNode.cpp
 SINGLYLINKEDNODE_FILES = $(SOURCES)/$(FILES)
 
+DOUBLYLINKEDNODE = $(INCLUDES)/nodes/doublyLinkedNode.hpp $(SOURCES)/doublyLinkedNode.cpp
+DOUBLYLINKEDNODE_FILES = $(SOURCES)/$(FILES)
+
 #----Data-types------------------------------------------------------------>
 
-all: node binaryNode singlyLinkedNode
+all: node binaryNode singlyLinkedNode doublyLinkedNode
 
 #----Nodes----------------------------------------------------------------->
 
@@ -37,6 +40,9 @@ binaryNode: node $(BINARYNODE)
 
 singlyLinkedNode: node $(SINGLYLINKEDNODE)
 	$(CXX) $(CXXFLAGS) $(SINGLYLINKEDNODE_FILES)
+
+doublyLinkedNode: node $(DOUBLYLINKEDNODE)
+	$(CXX) $(CXXFLAGS) $(DOUBLYLINKEDNODE_FILES)
 	
 
 #----Utlities-------------------------------------------------------------->

@@ -49,7 +49,7 @@ namespace dra{
 		* \brief The constructor that places some data in the node.
 		* \param data Is the actual data that's going to be placed in the node.
 		*/
-		node(const T data);
+		node(const T& data);
 
 		/*!
 		* \brief The destructor. Does nothing special.
@@ -78,7 +78,7 @@ namespace dra{
 	{}
 
 	template<class T>
-	node<T>::node(const T data):
+	node<T>::node(const T& data):
 	data_(data)
 	{}
 

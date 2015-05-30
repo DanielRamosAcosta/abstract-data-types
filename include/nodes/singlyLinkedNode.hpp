@@ -51,7 +51,7 @@
 		/*!
 		* \brief This is the that receives a data that will be stored in the parent's class
 		*/
-		singlyLinkedNode(const T data);
+		singlyLinkedNode(const T& data);
 
 		/*!
 		* \brief The destructor. Does nothing special.
@@ -82,7 +82,7 @@
 	{}
 
 	template <class T>
-	singlyLinkedNode<T>::singlyLinkedNode(const T data):
+	singlyLinkedNode<T>::singlyLinkedNode(const T& data):
 	node<T>(data),
 	next_(nullptr)
 	{}

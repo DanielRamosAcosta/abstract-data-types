@@ -103,7 +103,9 @@ Inheritance diagram for dra::node&lt; T &gt;:</div>
  <div class="center">
   <img src="classdra_1_1node.png" usemap="#dra::node&lt; T &gt;_map" alt=""/>
   <map id="dra::node&lt; T &gt;_map" name="dra::node&lt; T &gt;_map">
-<area href="classdra_1_1binary_node.html" alt="dra::binaryNode&lt; T &gt;" shape="rect" coords="0,56,134,80"/>
+<area href="classdra_1_1binary_node.html" alt="dra::binaryNode&lt; T &gt;" shape="rect" coords="0,56,173,80"/>
+<area href="classdra_1_1doubly_linked_node.html" alt="dra::doublyLinkedNode&lt; T &gt;" shape="rect" coords="183,56,356,80"/>
+<area href="classdra_1_1singly_linked_node.html" alt="dra::singlyLinkedNode&lt; T &gt;" shape="rect" coords="366,56,539,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -113,9 +115,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad6abeda1c8d7f25e14934a60aff01fd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdra_1_1node.html#ad6abeda1c8d7f25e14934a60aff01fd4">node</a> (void)</td></tr>
 <tr class="memdesc:ad6abeda1c8d7f25e14934a60aff01fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the default constructor of the node.  <a href="#ad6abeda1c8d7f25e14934a60aff01fd4">More...</a><br /></td></tr>
 <tr class="separator:ad6abeda1c8d7f25e14934a60aff01fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd6cbe2fe9e9f847fb00335c37007bae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdra_1_1node.html#afd6cbe2fe9e9f847fb00335c37007bae">node</a> (const T <a class="el" href="classdra_1_1node.html#ae37dd5bf0e01937184e90e4b9827e81e">data</a>)</td></tr>
-<tr class="memdesc:afd6cbe2fe9e9f847fb00335c37007bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor that places some data in the node.  <a href="#afd6cbe2fe9e9f847fb00335c37007bae">More...</a><br /></td></tr>
-<tr class="separator:afd6cbe2fe9e9f847fb00335c37007bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17947cdfa0412fc25b55d5b4d74d46ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdra_1_1node.html#a17947cdfa0412fc25b55d5b4d74d46ca">node</a> (const T &amp;<a class="el" href="classdra_1_1node.html#ae37dd5bf0e01937184e90e4b9827e81e">data</a>)</td></tr>
+<tr class="memdesc:a17947cdfa0412fc25b55d5b4d74d46ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor that places some data in the node.  <a href="#a17947cdfa0412fc25b55d5b4d74d46ca">More...</a><br /></td></tr>
+<tr class="separator:a17947cdfa0412fc25b55d5b4d74d46ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0597fe3f8b0a7bfd146525e2fd472700"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdra_1_1node.html#a0597fe3f8b0a7bfd146525e2fd472700">~node</a> (void)</td></tr>
 <tr class="memdesc:a0597fe3f8b0a7bfd146525e2fd472700"><td class="mdescLeft">&#160;</td><td class="mdescRight">The destructor. Does nothing special.  <a href="#a0597fe3f8b0a7bfd146525e2fd472700">More...</a><br /></td></tr>
 <tr class="separator:a0597fe3f8b0a7bfd146525e2fd472700"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +159,7 @@ template&lt;class T &gt; </div>
 </div><!-- fragment -->
 </div>
 </div>
-<a class="anchor" id="afd6cbe2fe9e9f847fb00335c37007bae"></a>
+<a class="anchor" id="a17947cdfa0412fc25b55d5b4d74d46ca"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -166,7 +168,7 @@ template&lt;class T &gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classdra_1_1node.html">dra::node</a>&lt; T &gt;::<a class="el" href="classdra_1_1node.html">node</a> </td>
           <td>(</td>
-          <td class="paramtype">const T&#160;</td>
+          <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>data</em></td><td>)</td>
           <td></td>
         </tr>
@@ -182,7 +184,7 @@ template&lt;class T &gt; </div>
 </dl>
 
 <p>Definition at line <a class="el" href="node_8hpp_source.html#l00081">81</a> of file <a class="el" href="node_8hpp_source.html">node.hpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                             :</div>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                              :</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    data_(<a class="code" href="classdra_1_1node.html#ae37dd5bf0e01937184e90e4b9827e81e">data</a>)</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {}</div>
 <div class="ttc" id="classdra_1_1node_html_ae37dd5bf0e01937184e90e4b9827e81e"><div class="ttname"><a href="classdra_1_1node.html#ae37dd5bf0e01937184e90e4b9827e81e">dra::node::data</a></div><div class="ttdeci">T &amp; data(void)</div><div class="ttdoc">Returns a reference to the data to modify it. </div><div class="ttdef"><b>Definition:</b> <a href="node_8hpp_source.html#l00090">node.hpp:90</a></div></div>

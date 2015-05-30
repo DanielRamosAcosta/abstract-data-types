@@ -51,7 +51,7 @@
 		/*!
 		* \brief This is the that receives a data that will be stored in the parent's class
 		*/
-		binaryNode(const T data);
+		binaryNode(const T& data);
 
 		/*!
 		* \brief The destructor. Does nothing special.
@@ -95,7 +95,7 @@
 	{}
 
 	template <class T>
-	binaryNode<T>::binaryNode(const T data):
+	binaryNode<T>::binaryNode(const T& data):
 	node<T>(data),
 	left_(nullptr),
 	right_(nullptr)

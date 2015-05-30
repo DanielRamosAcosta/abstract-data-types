@@ -120,8 +120,22 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="binary_node_8cpp_source.html#l00004">4</a> of file <a class="el" href="binary_node_8cpp_source.html">binaryNode.cpp</a>.</p>
 <div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>* m_lft = <span class="keyword">new</span> <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>(8);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>* m_rht = <span class="keyword">new</span> <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>(2);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>* root = <span class="keyword">new</span> <a class="code" href="classdra_1_1binary_node.html">dra::binaryNode&lt;int&gt;</a>(3);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    root-&gt;<a class="code" href="classdra_1_1binary_node.html#a910082f25c004dd8ce6dfda4cabdea34">left</a>() = m_lft;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    root-&gt;<a class="code" href="classdra_1_1binary_node.html#af4d15f6a0f8b234ae564bf6fc741a5fe">right</a>() = m_rht;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">delete</span> m_lft;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">delete</span> m_rht;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">delete</span> root;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="classdra_1_1binary_node_html_af4d15f6a0f8b234ae564bf6fc741a5fe"><div class="ttname"><a href="classdra_1_1binary_node.html#af4d15f6a0f8b234ae564bf6fc741a5fe">dra::binaryNode::right</a></div><div class="ttdeci">binaryNode *&amp; right(void)</div><div class="ttdoc">Returns a reference to the pinter to the right node to modify it. </div><div class="ttdef"><b>Definition:</b> <a href="binary_node_8hpp_source.html#l00121">binaryNode.hpp:121</a></div></div>
+<div class="ttc" id="classdra_1_1binary_node_html"><div class="ttname"><a href="classdra_1_1binary_node.html">dra::binaryNode</a></div><div class="ttdef"><b>Definition:</b> <a href="binary_node_8hpp_source.html#l00030">binaryNode.hpp:30</a></div></div>
+<div class="ttc" id="classdra_1_1binary_node_html_a910082f25c004dd8ce6dfda4cabdea34"><div class="ttname"><a href="classdra_1_1binary_node.html#a910082f25c004dd8ce6dfda4cabdea34">dra::binaryNode::left</a></div><div class="ttdeci">binaryNode *&amp; left(void)</div><div class="ttdoc">Returns a reference to the pinter to the left node to modify it. </div><div class="ttdef"><b>Definition:</b> <a href="binary_node_8hpp_source.html#l00109">binaryNode.hpp:109</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

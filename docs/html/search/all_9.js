@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['queue_2ecpp',['queue.cpp',['../queue_8cpp.html',1,'']]],
-  ['queue_2ehpp',['queue.hpp',['../queue_8hpp.html',1,'']]]
+  ['prev',['prev',['../classdra_1_1doubly_linked_node.html#a70d18aecec422f784bad74e681b0700a',1,'dra::doublyLinkedNode::prev(void)'],['../classdra_1_1doubly_linked_node.html#a83cab956f985db9a6d5a1992eb522eb3',1,'dra::doublyLinkedNode::prev(void) const ']]]
 ];
