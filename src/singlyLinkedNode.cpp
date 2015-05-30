@@ -3,5 +3,11 @@
 
 int main(void)
 {
-	std::cout << "Hello World" << std::endl;
+	dra::singlyLinkedNode<int>* one = new dra::singlyLinkedNode<int>(8);
+	dra::singlyLinkedNode<int>* two = new dra::singlyLinkedNode<int>(3);
+
+	one->next() = two;
+
+	delete one;
+	delete two;
 }
