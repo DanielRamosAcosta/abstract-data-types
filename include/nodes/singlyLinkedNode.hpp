@@ -25,7 +25,7 @@
 
 #include "nodes/node.hpp"
 
- namespace dra{
+namespace dra{
 
 	template<class T>
  	class singlyLinkedNode : public dra::node<T>{

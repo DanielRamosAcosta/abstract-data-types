@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"extra",
+				"extract_front"
+			],
+			[
+				"what",
+				"what_"
+			],
+			[
+				"be",
+				"beg_"
+			],
+			[
+				"si",
+				"singlyLinkedNode"
+			],
+			[
+				"sin",
+				"singlyLinkedNode"
+			],
+			[
+				"push",
+				"push_back"
+			],
+			[
+				"sng",
+				"singlyLinkedNode"
+			],
+			[
+				"s",
+				"singlyLinkedList"
+			],
+			[
+				"do",
+				"doublyLinkedNode"
+			],
+			[
 				"CXX",
 				"CXXFLAGS"
 			],
@@ -176,10 +212,6 @@
 				"endl"
 			],
 			[
-				"sin",
-				"sin_addr"
-			],
-			[
 				"acc",
 				"accepted_socket_decryptor"
 			],
@@ -200,26 +232,26 @@
 	"buffers":
 	[
 		{
-			"file": "include/nodes/simpleLinkedNode.hpp",
+			"file": "src/singlyLinkedList.cpp",
 			"settings":
 			{
-				"buffer_size": 2112,
+				"buffer_size": 570,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/simpleLinkedNode.cpp",
+			"file": "include/linkedLists/singlyLinkedList.hpp",
 			"settings":
 			{
-				"buffer_size": 120,
+				"buffer_size": 5048,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "makefile",
+			"file": "include/utils/exceptions.hpp",
 			"settings":
 			{
-				"buffer_size": 1247,
+				"buffer_size": 348,
 				"line_ending": "Unix"
 			}
 		}
@@ -271,22 +303,32 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 112.0,
-		"last_filter": "menu",
+		"height": 72.0,
+		"last_filter": "package control install",
 		"selected_items":
 		[
+			[
+				"package control install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
 			[
 				"menu",
 				"View: Toggle Menu"
 			]
 		],
-		"width": 346.0
+		"width": 449.0
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 146.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"make"
 		]
 	},
 	"distraction_free":
@@ -302,18 +344,29 @@
 	[
 		"/home/daniel/Documentos/GitHub/abstract-data-types",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/include",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/linkedLists",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/utils",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/src"
 	],
 	"file_history":
 	[
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/singlyLinkedNode.hpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/makefile",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/README.md",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src/doublyLinkedNode.cpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src/doublyLinkedList.cpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/doublyLinkedNode.hpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/binaryNode.hpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src/singlyLinkedNode.cpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/node.hpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src/singlyLinkedList.cpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/src/simpleLinkedNode.cpp",
+		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/simpleLinkedNode.hpp",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/LICENSE.md",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/src/binaryNode.cpp",
-		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/binaryNode.hpp",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/Doxyfile",
-		"/home/daniel/Documentos/GitHub/abstract-data-types/include/nodes/node.hpp",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/src/node.cpp",
-		"/home/daniel/Documentos/GitHub/abstract-data-types/makefile",
 		"/home/daniel/Documentos/GitHub/abstract-data-types/untitled.sublime-project",
 		"/home/daniel/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
 		"/home/daniel/Descargas/servidor_ftp/src/ftp_server.cpp",
@@ -340,7 +393,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -354,6 +407,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"simple",
+			"end_",
+			"bgn_",
+			"beg",
+			"begç",
+			"node",
+			"right",
+			"left",
+			"binaryNode",
+			"singlyLinkedNode",
 			"connect_TCP",
 			"define_socket_TCP",
 			"connec",
@@ -394,48 +457,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "include/nodes/simpleLinkedNode.hpp",
+					"file": "src/singlyLinkedList.cpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2112,
+						"buffer_size": 570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2081,
-								2081
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 495.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/simpleLinkedNode.cpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35,
-								35
+								83,
+								83
 							]
 						],
 						"settings":
@@ -446,32 +480,65 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "makefile",
+					"buffer": 1,
+					"file": "include/linkedLists/singlyLinkedList.hpp",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1247,
+						"buffer_size": 5048,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								135,
-								135
+								1984,
+								1984
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+							"rulers":
+							[
+								80
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 612.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "include/utils/exceptions.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 348,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								319,
+								319
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
