@@ -77,6 +77,7 @@ namespace dra{
 		singlyLinkedNode<T>* extract_back(void);
 		singlyLinkedNode<T>* extract_front(void);
 		singlyLinkedNode<T>* extract_pos(unsigned);
+		singlyLinkedNode<T>* extract_pos(int);
 
 		bool empty(void) const;
 
@@ -151,13 +152,13 @@ namespace dra{
 		if(empty()) throw exception::access_error(pos);
 
 		singlyLinkedNode<T>* tmp = head_;
-		pos--;
-		while(pos != 0){
+		unsigned npos = pos-1;
+		while(npos != 0){
 			if(tmp->next() == nullptr)
 				throw exception::access_error(pos);
 			else{
 				tmp = tmp->next();
-				pos--;
+				npos--;
 			}
 		}
 
