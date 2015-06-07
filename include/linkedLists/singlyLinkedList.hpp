@@ -69,13 +69,13 @@ namespace dra{
 		~singlyLinkedList(void);
 		///@}
 
-		void insert_back(singlyLinkedNode<T>*);
-		void insert_front(singlyLinkedNode<T>*);
+		void insert_back(T);
+		void insert_front(T);
 		void insert_pos(singlyLinkedNode<T>*, unsigned);
 		void insert_pos(singlyLinkedNode<T>*, int);
 
-		singlyLinkedNode<T>* extract_back(void);
-		singlyLinkedNode<T>* extract_front(void);
+		void extract_back(void);
+		void extract_front(void);
 		singlyLinkedNode<T>* extract_pos(unsigned);
 		singlyLinkedNode<T>* extract_pos(int);
 
@@ -119,8 +119,9 @@ namespace dra{
 	}
 
 	template<class T>
-	void singlyLinkedList<T>::insert_back(singlyLinkedNode<T>* node)
+	void singlyLinkedList<T>::insert_back(T data)
 	{
+		singlyLinkedNode<T>* node = new singlyLinkedNode<T>(data);
 		if(empty()) first(node);
 		else{
 			node->next() = nullptr;
@@ -130,8 +131,9 @@ namespace dra{
 	}
 
 	template<class T>
-	void singlyLinkedList<T>::insert_front(singlyLinkedNode<T>* node)
+	void singlyLinkedList<T>::insert_front(T data)
 	{
+		singlyLinkedNode<T>* node = new singlyLinkedNode<T>(data);
 		if(empty()) first(node);
 		else{
 			node->next() = head_;
@@ -181,7 +183,7 @@ namespace dra{
 	}
 
 	template<class T>
-	singlyLinkedNode<T>* singlyLinkedList<T>::extract_back(void)
+	void singlyLinkedList<T>::extract_back(void)
 	{
 		if(empty()) throw exception::length_error("List was empty");
 
@@ -197,11 +199,11 @@ namespace dra{
 			tmp = tmp->next();
 			tail_->next() = nullptr;
 		}
-		return tmp;
+		delete tmp;
 	}
 
 	template<class T>
-	singlyLinkedNode<T>* singlyLinkedList<T>::extract_front(void)
+	void singlyLinkedList<T>::extract_front(void)
 	{
 		if(empty()) throw exception::length_error("List was empty");
 
@@ -214,7 +216,7 @@ namespace dra{
 			head_ = head_->next();
 			tmp->next() = nullptr;
 		}
-		return tmp;
+		delete tmp;
 	}
 
 	template<class T>

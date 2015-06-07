@@ -1,6 +1,6 @@
 #------------------------------------------------------------------------------>
 
-CXX = g++
+CXX = g++-4.9
 CXXFLAGS = -std=c++11 -Wall -I $(INCLUDES) -o $(BIN)
 
 INCLUDES = include
@@ -29,12 +29,18 @@ DOUBLYLINKEDNODE_FILES = $(SOURCES)/$(FILES)
 SINGLYLINKEDLIST = $(INCLUDES)/linkedLists/singlyLinkedList.hpp $(SOURCES)/singlyLinkedList.cpp
 SINGLYLINKEDLIST_FILES = $(SOURCES)/$(FILES)
 
+HASHTABLE = $(INCLUDES)/hashTable/hashTable.hpp $(INCLUDES)/utils/common.hpp  $(SOURCES)/hashTable.cpp
+HASHTABLE_FILES = $(SOURCES)/$(FILES)
+
 #----Data-types------------------------------------------------------------>
 
 all: node binaryNode singlyLinkedNode doublyLinkedNode singlyLinkedList
 
 singlyLinkedList: node singlyLinkedNode $(SINGLYLINKEDLIST)
 	$(CXX) $(CXXFLAGS) $(SINGLYLINKEDLIST_FILES)
+
+hashTable: $(HASHTABLE)
+	$(CXX) $(CXXFLAGS) $(HASHTABLE_FILES)
 
 #----Nodes----------------------------------------------------------------->
 
@@ -49,7 +55,6 @@ singlyLinkedNode: node $(SINGLYLINKEDNODE)
 
 doublyLinkedNode: node $(DOUBLYLINKEDNODE)
 	$(CXX) $(CXXFLAGS) $(DOUBLYLINKEDNODE_FILES)
-	
 
 #----Utlities-------------------------------------------------------------->
 
