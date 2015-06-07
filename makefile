@@ -32,6 +32,9 @@ SINGLYLINKEDLIST_FILES = $(SOURCES)/$(FILES)
 HASHTABLE = $(INCLUDES)/hashTable/hashTable.hpp $(INCLUDES)/utils/common.hpp  $(SOURCES)/hashTable.cpp
 HASHTABLE_FILES = $(SOURCES)/$(FILES)
 
+BUCKET = $(INCLUDES)/hashTable/bucket.hpp $(INCLUDES)/utils/common.hpp $(SOURCES)/bucket.cpp
+BUCKET_FILES = $(SOURCES)/$(FILES)
+
 HUMAN = $(INCLUDES)/examples/human.hpp $(INCLUDES)/utils/random.hpp $(SOURCES)/human.cpp
 HUMAN_FILES = $(SOURCES)/$(FILES)
 
@@ -44,6 +47,9 @@ singlyLinkedList: node singlyLinkedNode $(SINGLYLINKEDLIST)
 
 hashTable: $(HASHTABLE)
 	$(CXX) $(CXXFLAGS) $(HASHTABLE_FILES)
+
+bucket: $(BUCKET)
+	$(CXX) $(CXXFLAGS) $(BUCKET_FILES)
 
 human: $(HUMAN)
 	$(CXX) $(CXXFLAGS) $(HUMAN_FILES)

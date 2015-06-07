@@ -22,7 +22,7 @@ namespace dra{
 		human(std::string, std::string, dni_t);
 		~human(void);
 
-		std::ostream& toStream(std::ostream&);
+		std::ostream& toStream(std::ostream&) const;
 
 		bool operator==(human& h);
 		bool operator!=(human& h);
@@ -264,7 +264,7 @@ namespace dra{
 	human::~human(void)
 	{}
 
-	std::ostream& human::toStream(std::ostream& os)
+	std::ostream& human::toStream(std::ostream& os) const
 	{
 		os << name_ << " " << surname_ << " " << dni_ << character_;
 		return os;
@@ -297,6 +297,11 @@ namespace dra{
 	bool human::operator>=(human& h)
 	{
 		return dni_ >= h.dni_;
+	}
+
+	std::ostream& operator<<(std::ostream& os, const human& it)
+	{
+		return it.toStream(os);
 	}
 }
 

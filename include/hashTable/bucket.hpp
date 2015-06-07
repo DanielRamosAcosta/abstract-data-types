@@ -33,16 +33,8 @@ namespace dra{
 	template<class T>
 	bucket<T>::~bucket(void)
 	{
-		if(cell_ == nullptr)
-			return;
-
-		for(size_t i = 0; i < sz_; i++)
-			if( cell_[i] != nullptr)
-				delete cell_[i];
-			else
-				break;
-
-		delete[] cell_;
+		if(cell_ != nullptr)
+			delete[] cell_;
 	}
 
 	template<class T>
@@ -76,7 +68,7 @@ namespace dra{
 			if(cell_[i] == nullptr)
 				os << "NULL" << std::endl;
 			else
-				os << cell_[i] << std::endl;
+				os << *cell_[i] << std::endl;
 		}
 		return os;
 	}
