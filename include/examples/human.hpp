@@ -22,6 +22,10 @@ namespace dra{
 		human(std::string, std::string, dni_t);
 		~human(void);
 
+		std::string name(void) const;
+		std::string surname(void) const;
+		dni_t dni(void) const;
+
 		std::ostream& toStream(std::ostream&) const;
 
 		bool operator==(human& h);
@@ -253,7 +257,7 @@ namespace dra{
 			case 99: surname_ = "Silverberg"; break;
 			default: surname_ = "???"; break;
 		}
-	}
+	};
 
 	human::human(std::string name, std::string surname, dni_t dni):
 	name_(name),
@@ -263,6 +267,21 @@ namespace dra{
 
 	human::~human(void)
 	{}
+
+	std::string human::name(void) const
+	{
+		return name_;
+	}
+	
+	std::string human::surname(void) const
+	{
+		return surname_;	
+	}
+
+	dni_t human::dni(void) const
+	{
+		return dni_;
+	}
 
 	std::ostream& human::toStream(std::ostream& os) const
 	{
@@ -274,6 +293,7 @@ namespace dra{
 	{
 		return dni_ == h.dni_;
 	}
+
 	bool human::operator!=(human& h)
 	{
 		return dni_ != h.dni_;

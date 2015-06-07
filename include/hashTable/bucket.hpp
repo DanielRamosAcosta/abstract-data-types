@@ -3,42 +3,39 @@
 
 #include <iostream>
 
-#include <utils/common.hpp>
+#include "utils/common.hpp"
+
+#include "key/key.hpp"
 
 namespace dra{
-
-	template<class T>
 	class bucket
 	{
 	private:
-		T** cell_;
+		key** cell_;
 		size_t sz_;
 	public:
 		bucket(size_t);
 		~bucket(void);
 
-		bool insert(T*);
-		bool search(T*);
+		bool insert(key*);
+		bool search(key*);
 
 		std::ostream& toStream(std::ostream&);
 	};
 
-	template<class T>
-	bucket<T>::bucket(size_t sz):
+	bucket::bucket(size_t sz):
 	sz_(sz)
 	{
-		cell_ = new T*[sz_];
+		cell_ = new key*[sz_];
 	}
 
-	template<class T>
-	bucket<T>::~bucket(void)
+	bucket::~bucket(void)
 	{
 		if(cell_ != nullptr)
 			delete[] cell_;
 	}
 
-	template<class T>
-	bool bucket<T>::insert(T* record)
+	bool bucket::insert(key* record)
 	{
 		for(size_t i = 0; i < sz_; i++){
         	if(cell_[i] == nullptr){
@@ -49,8 +46,7 @@ namespace dra{
     	return false;
 	}
 
-	template<class T>
-	bool bucket<T>::search(T* record)
+	bool bucket::search(key* record)
 	{
 		for(size_t i = 0; i < sz_; i++){
 			if(cell_[i] == record)
@@ -61,14 +57,13 @@ namespace dra{
 		return false;
 	}
 
-	template<class T>
-	std::ostream& bucket<T>::toStream(std::ostream& os)
+	std::ostream& bucket::toStream(std::ostream& os)
 	{
 		for(size_t i = 0; i < sz_; i++){
 			if(cell_[i] == nullptr)
 				os << "NULL" << std::endl;
 			else
-				os << *cell_[i] << std::endl;
+				os << cell_[i] << std::endl;
 		}
 		return os;
 	}

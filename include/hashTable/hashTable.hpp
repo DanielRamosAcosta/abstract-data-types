@@ -12,22 +12,27 @@
 
 namespace dra{
 
-	template<class T>
 	class hashTable
 	{
 	private:
-		bucket<T>* bucket_;
+		bucket* bucket_;
 		size_t sz_;
 
-		unsigned hash_mode_;
-		unsigned probe_mode_;
+		hash_mode_t hash_mode_;
+		probe_mode_t probe_mode_;
+	private:
+		index_t hash(key*);
+		index_t hashModule(key*);
+		index_t hashPlus(key*);
+		index_t hashPseudoRandom(key*);
 
 	public:
-		hashTable();
-		~hashTable();
+		hashTable(index_t, index_t, hash_mode_t, probe_mode_t);
+		~hashTable(void);
 
+		void insert(key*);
+		void probe(key*);
 	};
-
 }
 
 #endif // HASHTABLE
