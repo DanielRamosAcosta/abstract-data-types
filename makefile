@@ -12,7 +12,7 @@ FILES = $@.cpp
 
 RM = rm -f
 
-#----Data-dependencies----------------------------------------------------->
+#----Data-dependencies--------------------------------------------------------->
 
 NODE = $(INCLUDES)/nodes/node.hpp $(SOURCES)/node.cpp
 NODE_FILES = $(SOURCES)/$(FILES)
@@ -38,7 +38,7 @@ BUCKET_FILES = $(SOURCES)/$(FILES)
 HUMAN = $(INCLUDES)/examples/human.hpp $(INCLUDES)/utils/random.hpp $(SOURCES)/human.cpp
 HUMAN_FILES = $(SOURCES)/$(FILES)
 
-#----Data-types------------------------------------------------------------>
+#----Data-types---------------------------------------------------------------->
 
 all: node binaryNode singlyLinkedNode doublyLinkedNode singlyLinkedList
 
@@ -54,7 +54,7 @@ bucket: $(BUCKET)
 human: $(HUMAN)
 	$(CXX) $(CXXFLAGS) $(HUMAN_FILES)
 
-#----Nodes----------------------------------------------------------------->
+#----Nodes--------------------------------------------------------------------->
 
 node: $(NODE)
 	$(CXX) $(CXXFLAGS) $(NODE_FILES)
@@ -68,11 +68,11 @@ singlyLinkedNode: node $(SINGLYLINKEDNODE)
 doublyLinkedNode: node $(DOUBLYLINKEDNODE)
 	$(CXX) $(CXXFLAGS) $(DOUBLYLINKEDNODE_FILES)
 
-#----Utlities-------------------------------------------------------------->
+#----Utlities------------------------------------------------------------------>
 
 #WIP
 
-#----Tools----------------------------------------------------------------->
+#----Tools--------------------------------------------------------------------->
 
 clean:
 	$(RM) bin/*
