@@ -4,12 +4,28 @@
 		"selected_items":
 		[
 			[
-				"extra",
-				"extract_front"
+				"what",
+				"what_arg"
 			],
 			[
-				"what",
-				"what_"
+				"inse",
+				"insert_pos"
+			],
+			[
+				"test",
+				"test2"
+			],
+			[
+				"inser",
+				"insert_back"
+			],
+			[
+				"singly",
+				"singlyLinkedNode"
+			],
+			[
+				"extra",
+				"extract_front"
 			],
 			[
 				"be",
@@ -235,7 +251,7 @@
 			"file": "src/singlyLinkedList.cpp",
 			"settings":
 			{
-				"buffer_size": 570,
+				"buffer_size": 994,
 				"line_ending": "Unix"
 			}
 		},
@@ -243,7 +259,7 @@
 			"file": "include/linkedLists/singlyLinkedList.hpp",
 			"settings":
 			{
-				"buffer_size": 5048,
+				"buffer_size": 5179,
 				"line_ending": "Unix"
 			}
 		},
@@ -251,7 +267,7 @@
 			"file": "include/utils/exceptions.hpp",
 			"settings":
 			{
-				"buffer_size": 348,
+				"buffer_size": 1036,
 				"line_ending": "Unix"
 			}
 		}
@@ -407,6 +423,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2",
+			"lengt",
 			"simple",
 			"end_",
 			"bgn_",
@@ -461,15 +479,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 570,
+						"buffer_size": 994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								83,
-								83
+								935,
+								935
 							]
 						],
 						"settings":
@@ -477,7 +495,7 @@
 							"syntax": "Packages/C++/C++.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 135.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -489,15 +507,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5048,
+						"buffer_size": 5179,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1984,
-								1984
+								1678,
+								1678
 							]
 						],
 						"settings":
@@ -510,7 +528,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 612.0,
+						"translation.y": 3258.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -522,15 +540,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 348,
+						"buffer_size": 1036,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								319,
-								319
+								753,
+								753
 							]
 						],
 						"settings":
@@ -538,7 +556,7 @@
 							"syntax": "Packages/C++/C.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 225.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
