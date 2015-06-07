@@ -15,7 +15,7 @@ namespace dra{
 	class hashTable
 	{
 	private:
-		bucket* bucket_;
+		bucket** bucket_;
 		size_t sz_;
 
 		hash_mode_t hash_mode_;
@@ -33,6 +33,16 @@ namespace dra{
 		void insert(key*);
 		void probe(key*);
 	};
+
+	hashTable::hashTable(index_t n, index_t m, hash_mode_t hm, probe_mode_t pm):
+	sz_(n),
+	hash_mode_(hm),
+	probe_mode_(pm)
+	{
+		bucket_ = new bucket*[n];
+		for(auto &i : bucket_)
+			i = new bucket(m);
+	}
 }
 
 #endif // HASHTABLE
