@@ -56,7 +56,6 @@ doublyLinkedNode: node $(DOUBLYLINKEDNODE)
 
 #----Utlities------------------------------------------------------------------>
 
-
 bucket: human $(BUCKET)
 	$(CXX) $(CXXFLAGS) $(SOURCES)/$(FILES)
 
