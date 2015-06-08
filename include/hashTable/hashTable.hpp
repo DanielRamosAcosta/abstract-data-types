@@ -5,6 +5,7 @@
 
 #include <utils/common.hpp>
 #include <hashTable/bucket.hpp>
+#include <utils/exceptions.hpp>
 
 #define HASH_MODULE 0
 #define HASH_PLUS 1
@@ -116,7 +117,7 @@ namespace dra{
 				return seek;
 			i++;
 		}
-		return -1; //TODO: Throw exception
+		throw exception::overflow_error(sz_); //TODO: Throw exception
 	}
 
 	std::ostream& hashTable::toStream(std::ostream& os)
