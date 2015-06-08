@@ -41,6 +41,22 @@ namespace exception{
 
 		const char* what() const throw(){return what_;}
 	};
+
+	class overflow_error : public std::exception{
+	private:
+		const char* what_;
+	public:
+		access_error(void): what_("An overflow was produced!"){}
+		access_error(const char* what_arg): what_(what_arg){}
+		access_error(int size){
+			std::stringstream what;
+			what << "An overflow was produced! Size: " << size;
+			what_ = what.str().c_str();
+		}
+
+		const char* what() const throw(){return what_;}
+	};
+
 }
 
 #endif // EXCEPTIONS

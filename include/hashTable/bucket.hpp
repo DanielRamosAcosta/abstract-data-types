@@ -20,6 +20,9 @@ namespace dra{
 		bool insert(key*);
 		bool search(key*);
 
+		bool full(void);
+		bool empty(void);
+
 		std::ostream& toStream(std::ostream&);
 	};
 
@@ -27,12 +30,20 @@ namespace dra{
 	sz_(sz)
 	{
 		cell_ = new key*[sz_];
+		for(unsigned i = 0; i < sz_; i++)
+			cell_[i] = nullptr;
 	}
 
 	bucket::~bucket(void)
 	{
-		if(cell_ != nullptr)
-			delete[] cell_;
+		for(unsigned i = 0; i < sz_; i++){
+			if(cell_[i] != nullptr){
+				delete cell_[i];
+				cell_[i] = nullptr;
+			}
+		}
+		delete[] cell_;
+
 	}
 
 	bool bucket::insert(key* record)
@@ -55,6 +66,16 @@ namespace dra{
 				return false;
 		}
 		return false;
+	}
+
+	bool bucket::full(void)
+	{
+		return cell_[sz_-1] != nullptr;
+	}
+
+	bool bucket::empty(void)
+	{
+		return cell_[0] == nullptr;
 	}
 
 	std::ostream& bucket::toStream(std::ostream& os)

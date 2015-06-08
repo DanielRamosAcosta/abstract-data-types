@@ -40,10 +40,10 @@ namespace dra{
 	{
 		srand(random<unsigned long>::rand());
 
-		unsigned name = rand() % 100;
+		unsigned name = (rand() % 100) -1;
 
 		srand(rand());
-		unsigned surname = rand() % 100;
+		unsigned surname = (rand() % 100) -1;
 
 		srand(rand());
 		dni_ = rand() % 50000000 + 30000000;
