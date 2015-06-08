@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['right',['right',['../classdra_1_1binary_node.html#af4d15f6a0f8b234ae564bf6fc741a5fe',1,'dra::binaryNode::right(void)'],['../classdra_1_1binary_node.html#a1e717e34f33a17590d6de070ec7bcdb0',1,'dra::binaryNode::right(void) const ']]]
+  ['hashtable',['hashTable',['../classdra_1_1hash_table.html#ae0f9f221f058a8ee22885c04e6c4fabf',1,'dra::hashTable']]],
+  ['human',['human',['../classdra_1_1human.html#a4a7d019e90468baffd2593f4694fc644',1,'dra::human::human(void)'],['../classdra_1_1human.html#a38006eba5ddef6663a8b7d69a0e3f25e',1,'dra::human::human(std::string, std::string, dni_t)']]]
 ];

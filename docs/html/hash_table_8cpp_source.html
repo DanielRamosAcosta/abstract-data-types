@@ -92,13 +92,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="hash_table_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../include/vector.hpp&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">    4</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;Hello World&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
-<div class="ttc" id="hash_table_8cpp_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition:</b> <a href="hash_table_8cpp_source.html#l00004">hashTable.cpp:4</a></div></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="hash_table_8hpp.html">hashTable/hashTable.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="key_human_d_n_i_8hpp.html">key/keyHumanDNI.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">    5</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="comment">//std::cout &lt;&lt; &quot;Hello World&quot; &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classdra_1_1hash_table.html">dra::hashTable</a> test_table(10, 3, 0, 0); <span class="comment">//10x3 table with hash=module probe=linear probing</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classdra_1_1human.html">dra::human</a> subject[31];</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;i : subject){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        test_table.<a class="code" href="classdra_1_1hash_table.html#a09844174c1419b7372345a2653b869c0">insert</a>(<span class="keyword">new</span> <a class="code" href="classdra_1_1key_human_d_n_i.html">dra::keyHumanDNI</a>(&amp;i));</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        test_table.<a class="code" href="classdra_1_1hash_table.html#a3bc87cc253b91434d65860124a1b70f7">toStream</a>(std::cout);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        sleep(1);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        system(<span class="stringliteral">&quot;clear&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    test_table.<a class="code" href="classdra_1_1hash_table.html#a3bc87cc253b91434d65860124a1b70f7">toStream</a>(std::cout);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="ttc" id="classdra_1_1human_html"><div class="ttname"><a href="classdra_1_1human.html">dra::human</a></div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00013">human.hpp:13</a></div></div>
+<div class="ttc" id="classdra_1_1hash_table_html_a3bc87cc253b91434d65860124a1b70f7"><div class="ttname"><a href="classdra_1_1hash_table.html#a3bc87cc253b91434d65860124a1b70f7">dra::hashTable::toStream</a></div><div class="ttdeci">std::ostream &amp; toStream(std::ostream &amp;)</div><div class="ttdef"><b>Definition:</b> <a href="hash_table_8hpp_source.html#l00123">hashTable.hpp:123</a></div></div>
+<div class="ttc" id="hash_table_8cpp_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="hash_table_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition:</b> <a href="hash_table_8cpp_source.html#l00005">hashTable.cpp:5</a></div></div>
+<div class="ttc" id="classdra_1_1key_human_d_n_i_html"><div class="ttname"><a href="classdra_1_1key_human_d_n_i.html">dra::keyHumanDNI</a></div><div class="ttdef"><b>Definition:</b> <a href="key_human_d_n_i_8hpp_source.html#l00009">keyHumanDNI.hpp:9</a></div></div>
+<div class="ttc" id="classdra_1_1hash_table_html_a09844174c1419b7372345a2653b869c0"><div class="ttname"><a href="classdra_1_1hash_table.html#a09844174c1419b7372345a2653b869c0">dra::hashTable::insert</a></div><div class="ttdeci">void insert(key *)</div><div class="ttdef"><b>Definition:</b> <a href="hash_table_8hpp_source.html#l00064">hashTable.hpp:64</a></div></div>
+<div class="ttc" id="classdra_1_1hash_table_html"><div class="ttname"><a href="classdra_1_1hash_table.html">dra::hashTable</a></div><div class="ttdef"><b>Definition:</b> <a href="hash_table_8hpp_source.html#l00018">hashTable.hpp:18</a></div></div>
+<div class="ttc" id="hash_table_8hpp_html"><div class="ttname"><a href="hash_table_8hpp.html">hashTable.hpp</a></div></div>
+<div class="ttc" id="key_human_d_n_i_8hpp_html"><div class="ttname"><a href="key_human_d_n_i_8hpp.html">keyHumanDNI.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

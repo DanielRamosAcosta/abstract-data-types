@@ -91,7 +91,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">keyHumanDNI.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="key_human_d_n_i_8hpp.html">Go to the documentation of this file.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="key_human_d_n_i_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KEYHUMANDNI</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define KEYHUMANDNI</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">utils/common.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="key_human_8hpp.html">key/keyHuman.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="human_8hpp.html">examples/human.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedra.html">dra</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classdra_1_1key_human_d_n_i.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classdra_1_1key_human_d_n_i.html">keyHumanDNI</a> : <span class="keyword">public</span> <a class="code" href="classdra_1_1key_human.html">keyHuman</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classdra_1_1key_human_d_n_i.html#a74bff1b569a48103c47754a50a02554b">keyHumanDNI</a>(<a class="code" href="classdra_1_1human.html">human</a>*);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classdra_1_1key_human_d_n_i.html#a2b7d2a89e4f8def0b8b97d2da28b9cb7">~keyHumanDNI</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> generate(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    };</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classdra_1_1key_human_d_n_i.html#a74bff1b569a48103c47754a50a02554b">   17</a></span>&#160;    <a class="code" href="classdra_1_1key_human_d_n_i.html#a74bff1b569a48103c47754a50a02554b">keyHumanDNI::keyHumanDNI</a>(<a class="code" href="classdra_1_1human.html">human</a>* h):</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classdra_1_1key_human.html">keyHuman</a>(h)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        generate();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classdra_1_1key_human_d_n_i.html#a2b7d2a89e4f8def0b8b97d2da28b9cb7">   23</a></span>&#160;    <a class="code" href="classdra_1_1key_human_d_n_i.html#a2b7d2a89e4f8def0b8b97d2da28b9cb7">keyHumanDNI::~keyHumanDNI</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> keyHumanDNI::generate(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">key_</a> = <a class="code" href="classdra_1_1key_human.html#a6b1e61bdf89db7e350b9f2c5bff0ce3b">human_ptr_</a>-&gt;<a class="code" href="classdra_1_1human.html#a679f589fd22bc61d71f1ab6b1fa472da">dni</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // KEYHUMANDNI</span></div>
+<div class="ttc" id="classdra_1_1key_human_html_a6b1e61bdf89db7e350b9f2c5bff0ce3b"><div class="ttname"><a href="classdra_1_1key_human.html#a6b1e61bdf89db7e350b9f2c5bff0ce3b">dra::keyHuman::human_ptr_</a></div><div class="ttdeci">human * human_ptr_</div><div class="ttdef"><b>Definition:</b> <a href="key_human_8hpp_source.html#l00014">keyHuman.hpp:14</a></div></div>
+<div class="ttc" id="classdra_1_1human_html"><div class="ttname"><a href="classdra_1_1human.html">dra::human</a></div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00013">human.hpp:13</a></div></div>
+<div class="ttc" id="common_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div></div>
+<div class="ttc" id="classdra_1_1key_html_a8f16f9fc6f792840a7225c06a61d6e4d"><div class="ttname"><a href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">dra::key::key_</a></div><div class="ttdeci">index_t key_</div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00011">key.hpp:11</a></div></div>
+<div class="ttc" id="namespacedra_html"><div class="ttname"><a href="namespacedra.html">dra</a></div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00009">human.hpp:9</a></div></div>
+<div class="ttc" id="human_8hpp_html"><div class="ttname"><a href="human_8hpp.html">human.hpp</a></div></div>
+<div class="ttc" id="classdra_1_1key_human_d_n_i_html"><div class="ttname"><a href="classdra_1_1key_human_d_n_i.html">dra::keyHumanDNI</a></div><div class="ttdef"><b>Definition:</b> <a href="key_human_d_n_i_8hpp_source.html#l00009">keyHumanDNI.hpp:9</a></div></div>
+<div class="ttc" id="key_human_8hpp_html"><div class="ttname"><a href="key_human_8hpp.html">keyHuman.hpp</a></div></div>
+<div class="ttc" id="classdra_1_1key_human_html"><div class="ttname"><a href="classdra_1_1key_human.html">dra::keyHuman</a></div><div class="ttdef"><b>Definition:</b> <a href="key_human_8hpp_source.html#l00012">keyHuman.hpp:12</a></div></div>
+<div class="ttc" id="classdra_1_1key_human_d_n_i_html_a74bff1b569a48103c47754a50a02554b"><div class="ttname"><a href="classdra_1_1key_human_d_n_i.html#a74bff1b569a48103c47754a50a02554b">dra::keyHumanDNI::keyHumanDNI</a></div><div class="ttdeci">keyHumanDNI(human *)</div><div class="ttdef"><b>Definition:</b> <a href="key_human_d_n_i_8hpp_source.html#l00017">keyHumanDNI.hpp:17</a></div></div>
+<div class="ttc" id="classdra_1_1human_html_a679f589fd22bc61d71f1ab6b1fa472da"><div class="ttname"><a href="classdra_1_1human.html#a679f589fd22bc61d71f1ab6b1fa472da">dra::human::dni</a></div><div class="ttdeci">dni_t dni(void) const </div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00281">human.hpp:281</a></div></div>
+<div class="ttc" id="classdra_1_1key_human_d_n_i_html_a2b7d2a89e4f8def0b8b97d2da28b9cb7"><div class="ttname"><a href="classdra_1_1key_human_d_n_i.html#a2b7d2a89e4f8def0b8b97d2da28b9cb7">dra::keyHumanDNI::~keyHumanDNI</a></div><div class="ttdeci">virtual ~keyHumanDNI()</div><div class="ttdef"><b>Definition:</b> <a href="key_human_d_n_i_8hpp_source.html#l00023">keyHumanDNI.hpp:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

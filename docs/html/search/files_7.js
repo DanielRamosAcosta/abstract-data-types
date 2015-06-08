@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['node_2ecpp',['node.cpp',['../node_8cpp.html',1,'']]],
-  ['node_2ehpp',['node.hpp',['../node_8hpp.html',1,'']]]
+  ['license_2emd',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];

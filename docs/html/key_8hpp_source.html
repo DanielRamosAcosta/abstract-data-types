@@ -91,7 +91,61 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">key.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="key_8hpp.html">Go to the documentation of this file.</a><div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<a href="key_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef KEY</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define KEY</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="common_8hpp.html">utils/common.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacedra.html">dra</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classdra_1_1key.html">    9</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classdra_1_1key.html">key</a>{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">   11</a></span>&#160;        <a class="code" href="namespacedra.html#a25b2569a685152d0e2f670668d325f21">index_t</a> <a class="code" href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">key_</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="classdra_1_1key.html#a4cb4c1e882c58a0bcb32d61d14e2b506">key</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classdra_1_1key.html#a6f6cdc10df4b318a13a171e2bd6baffb">~key</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="namespacedra.html#a25b2569a685152d0e2f670668d325f21">index_t</a> <a class="code" href="classdra_1_1key.html#ab9d2774537cda6f5115f01b44b6bbacf">value</a>(<span class="keywordtype">void</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">virtual</span> std::ostream&amp; <a class="code" href="classdra_1_1key.html#a28e4a08d7e50139de43479913e5e4db6">toStream</a>(std::ostream&amp;)=0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classdra_1_1key.html#ae05ddd9ae990b259eca0927b98df4417">generate</a>(<span class="keywordtype">void</span>)=0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    };</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classdra_1_1key.html#a4cb4c1e882c58a0bcb32d61d14e2b506">   23</a></span>&#160;    <a class="code" href="classdra_1_1key.html#a4cb4c1e882c58a0bcb32d61d14e2b506">key::key</a>(<span class="keywordtype">void</span>):</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    key_(<a class="code" href="common_8hpp.html#adadb63c689034ba432b406efbeb023ce">UNINITIALIZED_INDEX</a>)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classdra_1_1key.html#a6f6cdc10df4b318a13a171e2bd6baffb">   27</a></span>&#160;    <a class="code" href="classdra_1_1key.html#a6f6cdc10df4b318a13a171e2bd6baffb">key::~key</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classdra_1_1key.html#ab9d2774537cda6f5115f01b44b6bbacf">   30</a></span>&#160;    <a class="code" href="namespacedra.html#a25b2569a685152d0e2f670668d325f21">index_t</a> <a class="code" href="classdra_1_1key.html#ab9d2774537cda6f5115f01b44b6bbacf">key::value</a>(<span class="keywordtype">void</span>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">key_</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespacedra.html#ae195619b32de30c781d0c2a73ff49947">   35</a></span>&#160;    std::ostream&amp; <a class="code" href="namespacedra.html#a31b433072671a4d343ab638d4f2c1d6e">operator&lt;&lt;</a>(std::ostream&amp; os, <a class="code" href="classdra_1_1key.html">key</a>* key_ptr)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        key_ptr-&gt;<a class="code" href="classdra_1_1key.html#a28e4a08d7e50139de43479913e5e4db6">toStream</a>(os);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif // KEY</span></div>
+<div class="ttc" id="classdra_1_1key_html_ab9d2774537cda6f5115f01b44b6bbacf"><div class="ttname"><a href="classdra_1_1key.html#ab9d2774537cda6f5115f01b44b6bbacf">dra::key::value</a></div><div class="ttdeci">index_t value(void) const </div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00030">key.hpp:30</a></div></div>
+<div class="ttc" id="common_8hpp_html_adadb63c689034ba432b406efbeb023ce"><div class="ttname"><a href="common_8hpp.html#adadb63c689034ba432b406efbeb023ce">UNINITIALIZED_INDEX</a></div><div class="ttdeci">#define UNINITIALIZED_INDEX</div><div class="ttdef"><b>Definition:</b> <a href="common_8hpp_source.html#l00004">common.hpp:4</a></div></div>
+<div class="ttc" id="common_8hpp_html"><div class="ttname"><a href="common_8hpp.html">common.hpp</a></div></div>
+<div class="ttc" id="classdra_1_1key_html_a8f16f9fc6f792840a7225c06a61d6e4d"><div class="ttname"><a href="classdra_1_1key.html#a8f16f9fc6f792840a7225c06a61d6e4d">dra::key::key_</a></div><div class="ttdeci">index_t key_</div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00011">key.hpp:11</a></div></div>
+<div class="ttc" id="namespacedra_html"><div class="ttname"><a href="namespacedra.html">dra</a></div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00009">human.hpp:9</a></div></div>
+<div class="ttc" id="namespacedra_html_a25b2569a685152d0e2f670668d325f21"><div class="ttname"><a href="namespacedra.html#a25b2569a685152d0e2f670668d325f21">dra::index_t</a></div><div class="ttdeci">unsigned index_t</div><div class="ttdef"><b>Definition:</b> <a href="common_8hpp_source.html#l00012">common.hpp:12</a></div></div>
+<div class="ttc" id="classdra_1_1key_html_a28e4a08d7e50139de43479913e5e4db6"><div class="ttname"><a href="classdra_1_1key.html#a28e4a08d7e50139de43479913e5e4db6">dra::key::toStream</a></div><div class="ttdeci">virtual std::ostream &amp; toStream(std::ostream &amp;)=0</div></div>
+<div class="ttc" id="classdra_1_1key_html_ae05ddd9ae990b259eca0927b98df4417"><div class="ttname"><a href="classdra_1_1key.html#ae05ddd9ae990b259eca0927b98df4417">dra::key::generate</a></div><div class="ttdeci">virtual void generate(void)=0</div></div>
+<div class="ttc" id="namespacedra_html_a31b433072671a4d343ab638d4f2c1d6e"><div class="ttname"><a href="namespacedra.html#a31b433072671a4d343ab638d4f2c1d6e">dra::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const human &amp;it)</div><div class="ttdef"><b>Definition:</b> <a href="human_8hpp_source.html#l00322">human.hpp:322</a></div></div>
+<div class="ttc" id="classdra_1_1key_html_a4cb4c1e882c58a0bcb32d61d14e2b506"><div class="ttname"><a href="classdra_1_1key.html#a4cb4c1e882c58a0bcb32d61d14e2b506">dra::key::key</a></div><div class="ttdeci">key(void)</div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00023">key.hpp:23</a></div></div>
+<div class="ttc" id="classdra_1_1key_html_a6f6cdc10df4b318a13a171e2bd6baffb"><div class="ttname"><a href="classdra_1_1key.html#a6f6cdc10df4b318a13a171e2bd6baffb">dra::key::~key</a></div><div class="ttdeci">virtual ~key(void)</div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00027">key.hpp:27</a></div></div>
+<div class="ttc" id="classdra_1_1key_html"><div class="ttname"><a href="classdra_1_1key.html">dra::key</a></div><div class="ttdef"><b>Definition:</b> <a href="key_8hpp_source.html#l00009">key.hpp:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

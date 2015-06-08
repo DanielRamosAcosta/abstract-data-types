@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['data',['data',['../classdra_1_1node.html#ae37dd5bf0e01937184e90e4b9827e81e',1,'dra::node::data(void)'],['../classdra_1_1node.html#aef7bbf814682d313824555c53edd2c1b',1,'dra::node::data(void) const ']]],
-  ['doublylinkednode',['doublyLinkedNode',['../classdra_1_1doubly_linked_node.html#aa0ab412404109a1b1bc83fce15a46fe1',1,'dra::doublyLinkedNode::doublyLinkedNode(void)'],['../classdra_1_1doubly_linked_node.html#a844ebe9f8d7bc0c594c32e2bc63f4401',1,'dra::doublyLinkedNode::doublyLinkedNode(const T &amp;data)']]]
+  ['binarynode',['binaryNode',['../classdra_1_1binary_node.html#a38c1858577f454c8f5b38c8e9b1542cb',1,'dra::binaryNode::binaryNode(void)'],['../classdra_1_1binary_node.html#acdda858678fb97d57a0ad8b4db0b4e09',1,'dra::binaryNode::binaryNode(const T &amp;data)']]],
+  ['bucket',['bucket',['../classdra_1_1bucket.html#ad2e8dda6c91cfbd4ec0986f76cb6d29f',1,'dra::bucket']]]
 ];

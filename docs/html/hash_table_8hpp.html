@@ -87,12 +87,99 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">hashTable.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="common_8hpp_source.html">utils/common.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="bucket_8hpp_source.html">hashTable/bucket.hpp</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="exceptions_8hpp_source.html">utils/exceptions.hpp</a>&gt;</code><br />
+</div>
 <p><a href="hash_table_8hpp_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdra_1_1hash_table.html">dra::hashTable</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespacedra"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacedra.html">dra</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a1ed6bbd76cb0d8c8e3c74f8730169150"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_table_8hpp.html#a1ed6bbd76cb0d8c8e3c74f8730169150">HASH_MODULE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a1ed6bbd76cb0d8c8e3c74f8730169150"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c78d0ea4fbfff07709540d1c469eb1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_table_8hpp.html#ad3c78d0ea4fbfff07709540d1c469eb1">HASH_PLUS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ad3c78d0ea4fbfff07709540d1c469eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cc4379d8d8b3e67629fba9a44ef433c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_table_8hpp.html#a7cc4379d8d8b3e67629fba9a44ef433c">HASH_PSEUDORANDOM</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a7cc4379d8d8b3e67629fba9a44ef433c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5da3fc470e5ed488e4d007c4707cd8c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hash_table_8hpp.html#ab5da3fc470e5ed488e4d007c4707cd8c">LINEAR_PROBING</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ab5da3fc470e5ed488e4d007c4707cd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a class="anchor" id="a1ed6bbd76cb0d8c8e3c74f8730169150"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HASH_MODULE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hash_table_8hpp_source.html#l00010">10</a> of file <a class="el" href="hash_table_8hpp_source.html">hashTable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3c78d0ea4fbfff07709540d1c469eb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HASH_PLUS&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hash_table_8hpp_source.html#l00011">11</a> of file <a class="el" href="hash_table_8hpp_source.html">hashTable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7cc4379d8d8b3e67629fba9a44ef433c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HASH_PSEUDORANDOM&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hash_table_8hpp_source.html#l00012">12</a> of file <a class="el" href="hash_table_8hpp_source.html">hashTable.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab5da3fc470e5ed488e4d007c4707cd8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LINEAR_PROBING&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="hash_table_8hpp_source.html#l00014">14</a> of file <a class="el" href="hash_table_8hpp_source.html">hashTable.hpp</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

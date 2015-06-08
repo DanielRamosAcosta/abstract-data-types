@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['doublylinkednode',['doublyLinkedNode',['../classdra_1_1doubly_linked_node.html',1,'dra']]]
+  ['binarynode',['binaryNode',['../classdra_1_1binary_node.html',1,'dra']]],
+  ['bucket',['bucket',['../classdra_1_1bucket.html',1,'dra']]]
 ];

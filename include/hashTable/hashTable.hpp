@@ -66,13 +66,13 @@ namespace dra{
 		index_t place = hash(mkey);
 
 		if(!bucket_[place]->insert(mkey)){
-			std::clog << "Can't insert in the bucket #" << place << " (it's full)!" << std::endl;
+			#ifdef _DEBUG
+				std::clog << "Can't insert in the bucket #" << place << " (it's full)!" << std::endl;
+			#endif //_DEBUG
 			place = probe(mkey);
 
-			if(!bucket_[place]->insert(mkey))
-				std::cerr << "What error#¢@|#¢1293" << std::endl;
-			else
-				std::clog << "I found other place in bucket #" << place << std::endl;
+			bucket_[place]->insert(mkey);
+			std::clog << "I found other place in bucket #" << place << std::endl;
 		}
 		else
 			std::clog << "Inserted correctly in bucket #" << place << std::endl;
