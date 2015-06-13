@@ -7,11 +7,21 @@
 #include <hashTable/bucket.hpp>
 #include <utils/exceptions.hpp>
 
+#ifdef _DEBUG
+	#include <unistd.h>
+#endif // _DEBUG
+
 #define HASH_MODULE 0
 #define HASH_PLUS 1
 #define HASH_PSEUDORANDOM 2
 
-#define LINEAR_PROBING 0
+#define PROBE_LINEAR 0
+#define PROBE_QUADRATIC 1
+#define PROBE_DOUBLE_HASHING 2
+#define PROBE_REHASHING 3
+
+#define STOP_LIMIT 256
+#define DOUBLE_HASHING_CONSTANT 7
 
 namespace dra{
 
@@ -28,7 +38,7 @@ namespace dra{
 		~hashTable(void);
 
 		void insert(key*);
-		index_t probe(key*);
+		bool search(key*);
 
 		std::ostream& toStream(std::ostream&);
 	private:
@@ -37,7 +47,11 @@ namespace dra{
 		index_t hashPlus(key*);
 		index_t hashPseudoRandom(key*);
 
-		index_t linearProbing(key*);
+		index_t probe(key*, unsigned);
+		index_t probeLinear(key*, unsigned);
+		index_t probeQuadratic(key*, unsigned);
+		index_t probeDoubleHashing(key*, unsigned);
+		index_t probeReHashing(key*, unsigned);
 	};
 
 	hashTable::hashTable(index_t n, index_t m, hash_mode_t hm, probe_mode_t pm):
@@ -66,10 +80,11 @@ namespace dra{
 		index_t place = hash(mkey);
 
 		if(!bucket_[place]->insert(mkey)){
-			#ifdef _DEBUG
-				std::clog << "Can't insert in the bucket #" << place << " (it's full)!" << std::endl;
-			#endif //_DEBUG
-			place = probe(mkey);
+			std::clog << "I couldn't insert it in the bucket #" << place << std::endl;
+			for(unsigned i = 1; bucket_[place]->full(); i++){
+				place = probe(mkey, i);
+				std::clog << "Let's check bucket #" << place << std::endl;
+			}
 
 			bucket_[place]->insert(mkey);
 			std::clog << "I found other place in bucket #" << place << std::endl;
@@ -78,46 +93,108 @@ namespace dra{
 			std::clog << "Inserted correctly in bucket #" << place << std::endl;
 	}
 
-	index_t hashTable::probe(key* mkey)
+	bool hashTable::search(key* mkey)
+	{
+		index_t place = hash(mkey);
+
+		if(!bucket_[place]->search(mkey)){
+			std::clog << "I didn't found the key in the bucket #" << place << std::endl;
+			for(unsigned i = 1; bucket_[place]->search(mkey); i++){
+				place = probe(mkey, i);
+				std::clog << "Let's check bucket #" << place << std::endl;
+			}
+			std::cout << "I finally found it in the bucket #" << place << std::endl;
+			return true;
+		}
+		else{
+			std::cout << "I found it in the bucket #" << place << std::endl;
+			return true;
+		}
+	}
+
+	index_t hashTable::probe(key* mkey, unsigned i)
 	{
 		switch(probe_mode_){
-			case LINEAR_PROBING: return linearProbing(mkey);
+			case PROBE_LINEAR:			return probeLinear(mkey, i); break;
+			case PROBE_QUADRATIC:		return probeQuadratic(mkey, i); break;
+			case PROBE_DOUBLE_HASHING:	return probeDoubleHashing(mkey, i); break;
+			case PROBE_REHASHING:		return probeReHashing(mkey, i); break;
 		}
-		return -1; //TODO: Throw exception
+		throw exception::bad_usage_error("Bad probe number code");
 	}
 
 	index_t hashTable::hash(key* mkey)
 	{
 		switch(hash_mode_){
-			case HASH_MODULE: return hashModule(mkey);
+			case HASH_MODULE:		return hashModule(mkey); break;
+			case HASH_PLUS:			return hashPlus(mkey); break;
+			case HASH_PSEUDORANDOM:	return hashPseudoRandom(mkey); break;
 		}
-		return -1; //TODO: Throw exception
+		throw exception::bad_usage_error("Bad hash number code");
 	}
 
 	index_t hashTable::hashModule(key* mkey)
 	{
-		//std::clog << "Module hashing..." << std::endl;
 		return mkey->value() % sz_;
 	}
 
-	index_t hashTable::linearProbing(key* mkey)
+	index_t hashTable::hashPlus(key* mkey)
 	{
-		unsigned i = 1;
-
-		index_t seek;
-
-		while(true)
+		unsigned aux = mkey->value();
+		unsigned sum = 0;
+		while(aux != 0)
 		{
-			if(i > sz_) //all buckets where checked with no luck
-				break;
-
-			seek = (hash(mkey) + i) % sz_;
-
-			if(!bucket_[seek]->full())
-				return seek;
-			i++;
+			unsigned reminder = aux % 10;
+			sum += reminder;
+			aux /= 10;
 		}
-		throw exception::overflow_error(sz_); //TODO: Throw exception
+		return sum % sz_;
+	}
+	
+	index_t hashTable::hashPseudoRandom(key* mkey)
+	{
+		srand(mkey->value());
+		return rand() % sz_;
+	}
+
+	index_t hashTable::probeLinear(key* mkey, unsigned i)
+	{
+		if(i > sz_)
+			throw exception::overflow_error(sz_);
+		return (hash(mkey) + i) % sz_;
+	}
+
+	index_t hashTable::probeQuadratic(key* mkey, unsigned i)
+	{
+		if(i > (sz_/2)) //quadratic probing won't check all buckets: http://en.wikipedia.org/wiki/Quadratic_probing#Limitations
+			throw exception::overflow_error("Passed sz_/2 value in probing");
+		return (hash(mkey) + (i*i)) % sz_;
+	}
+
+	index_t hashTable::probeDoubleHashing(key* mkey, unsigned i)
+	{
+		if(i > STOP_LIMIT)
+			throw exception::overflow_error("Passed STOP_LIMIT value in probing");
+		return (hash(mkey) + i * ((mkey->value() % DOUBLE_HASHING_CONSTANT)+1)) % sz_;
+	}
+
+	index_t hashTable::probeReHashing(key* mkey, unsigned i)
+	{
+		hash_mode_t aux = hash_mode_; //save hashing mode
+
+		hash_mode_ = i -1; //set the hash function to the iteration number
+
+		index_t place;
+
+		try{
+			place = hash(mkey); //catch if it is the last function
+		}
+		catch(...){
+			throw exception::overflow_error("Reached hash types limit");
+		}
+
+		hash_mode_ = aux;
+		return place;
 	}
 
 	std::ostream& hashTable::toStream(std::ostream& os)

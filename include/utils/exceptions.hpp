@@ -57,6 +57,16 @@ namespace exception{
 		const char* what() const throw(){return what_;}
 	};
 
+	class bad_usage_error : public std::exception{
+	private:
+		const char* what_;
+	public:
+		bad_usage_error(void): what_("Bad usage of the class"){}
+		bad_usage_error(const char* what_arg): what_(what_arg){}
+
+		const char* what() const throw(){return what_;}
+	};
+
 }
 
 #endif // EXCEPTIONS

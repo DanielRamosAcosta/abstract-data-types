@@ -46,21 +46,21 @@ namespace dra{
 
 	}
 
-	bool bucket::insert(key* record)
+	bool bucket::insert(key* mkey)
 	{
 		for(size_t i = 0; i < sz_; i++){
         	if(cell_[i] == nullptr){
-            	cell_[i] = record;
+            	cell_[i] = mkey;
             	return true;
         	}
     	}
     	return false;
 	}
 
-	bool bucket::search(key* record)
+	bool bucket::search(key* mkey)
 	{
 		for(size_t i = 0; i < sz_; i++){
-			if(cell_[i] == record)
+			if(cell_[i] == mkey)
 				return true;
 			else if(cell_[i] == nullptr)
 				return false;

@@ -6,9 +6,9 @@ int main(void)
 {
 	//std::cout << "Hello World" << std::endl;
 
-	dra::hashTable test_table(10, 3, 0, 0); //10x3 table with hash=module probe=linear probing
+	dra::hashTable test_table(7, 3, 0, 3); //10x3 table with hash=module probe=linear probing
 
-	dra::human subject[31];
+	dra::human subject[22];
 
 	system("clear");
 

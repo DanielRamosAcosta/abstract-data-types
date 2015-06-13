@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------>
 
 CXX = g++-4.9
-CXXFLAGS = -std=c++11 -Wall -I $(INCLUDES) -o $(BIN) -fdiagnostics-color=always
+CXXFLAGS = -std=c++11 -Wall -I $(INCLUDES) -o $(BIN) -fdiagnostics-color=always -D_DEBUG
 
 INCLUDES = include
 SOURCES = src
